@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'BraFurries-Front-End';
+  title = 'BraFurries - Furries do Brasil';
 }
