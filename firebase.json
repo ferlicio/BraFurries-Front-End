@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/bra-furries-front-end/browser",
+    "public": "dist",
     "ignore": [
       "firebase.json",
       "**/.*",
