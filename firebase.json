@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/brafurries-website",
+    "public": "/",
     "ignore": [
       "firebase.json",
       "**/.*",
