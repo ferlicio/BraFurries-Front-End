@@ -41,7 +41,7 @@ export interface Profile {
   description: string
   banner_hash: any
   game_application_ids: string[]
-  game_activity: GameActivity
+  game_activity: Record<string, ActivityData>
   tag: string
   badge: number
   badge_color_primary: string
@@ -53,10 +53,6 @@ export interface Profile {
   custom_banner_hash: string
   premium_subscription_count: number
   premium_tier: number
-}
-
-export interface GameActivity {
-    [userId: string]: ActivityData;
 }
 
 interface ActivityData {
