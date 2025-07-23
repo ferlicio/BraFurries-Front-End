@@ -18,7 +18,7 @@ export interface Sorting<T> {
   templateUrl: './table.component.html',
   styleUrl: './table.component.scss'
 })
-export class TableComponent<Model> {
+export class TableComponent<Model extends { id: number }> {
 
   @Input() redirectURL = '/clients';
   @Input() hasEdit = true;
@@ -27,8 +27,8 @@ export class TableComponent<Model> {
   @Input() sortable = true;
   @Input() appliedSort: Sorting<Model> | null = null;
   @Output() sortEvent = new EventEmitter<Sorting<Model>|null>();
-  @Output() editFunction = new EventEmitter<string>();
-  @Output() deleteFunction = new EventEmitter<string>();
+  @Output() editFunction = new EventEmitter<Model['id']>();
+  @Output() deleteFunction = new EventEmitter<Model['id']>();
 
 
   @Input() columns!: TableColumn<Model>[]
@@ -57,7 +57,7 @@ export class TableComponent<Model> {
   }
 
 
-  confirmDelete(id: Model[keyof Model] | undefined) {
+  confirmDelete(id: number) {
     if (!id) {
       this.dialog.open(DialogComponent, {
         data: {
@@ -78,7 +78,7 @@ export class TableComponent<Model> {
       }
     }).afterClosed().subscribe((result: boolean) => {
       if (result) {
-        this.deleteFunction.emit((id as keyof Model).toString());
+        this.deleteFunction.emit(id);
       }
     })
   }

@@ -2,7 +2,7 @@
     <div class="table-header">
         <div class="header-column-content">
             <div class="header-column" *ngFor="let c of columns"
-                (click)="sortColumn(c.prop)">
+                (click)="sortColumn(c)">
                 <p> <strong>{{ c.name }} 
                     <ng-container *ngIf="sortable">
                         <mat-icon *ngIf="appliedSort?.prop == c.prop && appliedSort?.direction == 'asc'">arrow_upward</mat-icon>
