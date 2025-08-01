@@ -1,1 +1,69 @@
-<p>login works!</p>
+<section>
+    <div class="bg-animation">
+        <div class="floating-paw">🐾</div>
+        <div class="floating-paw">🐾</div>
+        <div class="floating-paw">🐾</div>
+        <div class="floating-paw">🐾</div>
+        <div class="floating-paw">🐾</div>
+    </div>
+
+    <div class="login-container">
+        <div class="logo">
+            <!-- <h1>BraFurries</h1> -->
+            <img src="../../../../assets/images/logo-Brafurries/brafurries-principal.png" alt="" style="width: 150px; height: auto;">
+            <p class="subtitle-01">Entre na comunidade</p>
+        </div>
+        
+        <form id="loginForm" [formGroup]="loginForm" (enterkeyhint)="login()">
+            <div class="form-group">
+                <label class=".heading-07" for="email">Email ou usuário</label>
+                <app-input-wrapper
+                    class="input"
+                    formControlName="username"
+                    placeholder="Digite seu email ou usuário"
+                    [required]="true"
+                    >
+                </app-input-wrapper>
+            </div>
+            
+            <div class="form-group" style="position: relative;">
+                <label for="password">Senha</label>
+                <app-input-wrapper
+                    class="input"
+                    formControlName="password"
+                    type="password"
+                    placeholder="Digite sua senha"
+                    [required]="true"
+                    >
+                </app-input-wrapper>
+            </div>
+            
+            <div class="form-options">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Lembrar de mim</label>
+                </div>
+                <a href="#" class="forgot-password">Esqueci a senha</a>
+            </div>
+            
+            <button type="submit" (click)="login()" class="login-btn">Entrar</button>
+        </form>
+        
+        <div class="divider">
+            <span>ou</span>
+        </div>
+        
+        <div class="social-login">
+            <button class="social-btn" onclick="socialLogin('discord')">
+                <img src="../../../../../../../assets/images/logos-redes/discord-logo.png" alt="" style="width: 45px;">
+            </button>
+            <button class="social-btn" onclick="socialLogin('google')">
+                <img src="../../../../../../../assets/images/logos-redes/google-logo.png" alt="" style="width: 45px;">
+            </button>
+        </div>
+        
+        <div class="signup-link">
+            Não tem uma conta? <a href="#">Cadastre-se aqui</a>
+        </div>
+    </div>
+</section>

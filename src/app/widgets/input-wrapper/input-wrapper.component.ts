@@ -43,7 +43,7 @@ export const DATE_FORMAT = {
   ]
 })
 export class InputWrapperComponent implements ControlValueAccessor {
-  @Input() label: string = "No Label";
+  @Input() label: string = "";
   @Input() floatLabel: 'auto' | 'always' | 'never' = 'auto'; 
   @Input() appearance: string = '';                    
   @Input() type: FieldType = "text";                                        
@@ -55,8 +55,8 @@ export class InputWrapperComponent implements ControlValueAccessor {
   ];         
   @Input() disabled: boolean = false;
   @Input() required: boolean = false;
-  value: any;            
-  hidden: boolean = false;
+  value: any = null;            
+  hidden: boolean = true;
 
   constructor(private cdr: ChangeDetectorRef) {}
   

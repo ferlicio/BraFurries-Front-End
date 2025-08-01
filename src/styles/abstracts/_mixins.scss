@@ -21,7 +21,19 @@
 
 
 @mixin apply-typography {
-    body { @include type-style($paragraph-01...); }
+    * { @include type-style($paragraph-01...); }
+
+    .subtitle-01 { @include type-style($subtitle-01...); }
+    .subtitle-02 { @include type-style($subtitle-02...); }
+    .subtitle-03 { @include type-style($subtitle-03...); }
+
+    // parágrafos / legendas / etc (Archivo)
+    .body-text   { @include type-style($paragraph-01...); }
+    .small-text  { @include type-style($paragraph-02...); }
+    span, .caption { @include type-style($paragraph-03...); }
+    .micro       { @include type-style($paragraph-04...); }
+    .micro-2     { @include type-style($paragraph-05...); }
+
 
     h1 { @include type-style($heading-01...); }
     h2 { @include type-style($heading-02...); }
@@ -30,19 +42,6 @@
     h5 { @include type-style($heading-05...); }
     h6 { @include type-style($heading-06...); }
     .heading-07 { @include type-style($heading-07...); }
-
-    // subtítulos com família de corpo (ou escolha outra)
-    .subtitle-01 { @include type-style($subtitle-01...); }
-    .subtitle-02 { @include type-style($subtitle-02...); }
-    .subtitle-03 { @include type-style($subtitle-03...); }
-
-    // parágrafos / legendas / etc (Archivo)
-    p            { @include type-style($paragraph-01...); }
-    .body-text   { @include type-style($paragraph-01...); }
-    .small-text  { @include type-style($paragraph-02...); }
-    span, .caption { @include type-style($paragraph-03...); }
-    .micro       { @include type-style($paragraph-04...); }
-    .micro-2     { @include type-style($paragraph-05...); }
 }
 
 
