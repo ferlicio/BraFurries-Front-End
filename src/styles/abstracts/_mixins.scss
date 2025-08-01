@@ -1,12 +1,5 @@
 @use 'variables' as *;
 
-@import url(
-    'https://fonts.googleapis.com/css2' +
-    '?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700' +
-    '&family=Archivo:ital,wght@0,100..900;1,100..900' +
-    '&display=swap'
-);
-
 /// @param $weight numeric
 /// @param $size   css-size (px, rem…)
 /// @param $line   number or css-unit
