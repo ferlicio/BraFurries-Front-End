@@ -16,14 +16,13 @@
         
         <form id="loginForm" [formGroup]="loginForm" (enterkeyhint)="login()">
             <div class="form-group">
-                <label class=".heading-07" for="email">Email ou usuário</label>
+                <label for="email">Email ou usuário</label>
                 <app-input-wrapper
                     class="input"
                     formControlName="username"
                     placeholder="Digite seu email ou usuário"
                     [required]="true"
-                    >
-                </app-input-wrapper>
+                ></app-input-wrapper>
             </div>
             
             <div class="form-group" style="position: relative;">
@@ -34,8 +33,7 @@
                     type="password"
                     placeholder="Digite sua senha"
                     [required]="true"
-                    >
-                </app-input-wrapper>
+                ></app-input-wrapper>
             </div>
             
             <div class="form-options">
@@ -50,7 +48,9 @@
         </form>
         
         <div class="divider">
+            <hr>
             <span>ou</span>
+            <hr>
         </div>
         
         <div class="social-login">

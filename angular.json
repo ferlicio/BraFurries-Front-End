@@ -57,13 +57,25 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "3kb",
+                  "maximumError": "5kb"
                 }
               ],
               "outputHashing": "all"
             },
             "development": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "3kb",
+                  "maximumError": "5kb"
+                }
+              ],
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
