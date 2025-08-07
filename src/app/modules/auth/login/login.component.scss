@@ -72,6 +72,13 @@ section {
 .logo {
     text-align: center;
     margin-bottom: 30px;
+    a {
+        @include flex-center;
+        img {
+            width: 150px; 
+            height: auto;
+        }
+    }
 }
 
 .logo h1 {
