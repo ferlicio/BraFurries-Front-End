@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { provideHttpClient } from '@angular/common/http';
+import { GtagModule } from 'angular-gtag';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,10 @@ import { provideHttpClient } from '@angular/common/http';
     CoreModule,
     SharedModule,
     AppRoutingModule,
+    GtagModule.forRoot({
+      trackingId: 'G-CZ3HJVJWSK',
+      trackPageviews: true
+    }),
   ],
   providers: [provideHttpClient()],
   bootstrap: [AppComponent]
